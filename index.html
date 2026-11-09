@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Hospedagem e aplicações para bots Discord. VERTEX APPLICATIONS.">
+  <title>VERTEX APPLICATIONS 🪽</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">
+      <img src="/logo-vx.jpg" alt="Logo VX">
+      <span>VERTEX <b>APPLICATIONS</b><small>HOSPEDAGEM DE BOTS DISCORD</small></span>
+    </a>
+    <a class="top-link" href="#planos">Ver planos <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow"><i></i> HOSPEDAGEM PARA DISCORD</span>
+        <h1>Seu bot online.<br><span>Sua comunidade ativa.</span></h1>
+        <p>Hospedagem de aplicações Discord com planos simples e gerenciamento organizado.</p>
+        <a class="primary-btn" href="#planos">Escolher hospedagem <span>→</span></a>
+        <div class="hero-note">🪽 VERTEX APPLICATIONS</div>
+      </div>
+      <div class="hero-art">
+        <img src="/logo-vx.jpg" alt="Símbolo VX da VERTEX APPLICATIONS">
+      </div>
+    </section>
+
+    <section class="trust-row">
+      <div><strong>24/7*</strong><span>Objetivo de disponibilidade</span></div>
+      <div><strong>3 planos</strong><span>Escolha a duração</span></div>
+      <div><strong>Discord</strong><span>Foco em aplicações</span></div>
+    </section>
+    <p class="fineprint">*A disponibilidade depende do servidor de hospedagem contratado e da configuração técnica.</p>
+
+    <section class="section" id="planos">
+      <div class="section-heading">
+        <span class="eyebrow">PLANOS DE HOSPEDAGEM</span>
+        <h2>Escolha o seu plano</h2>
+        <p>Selecione a duração ideal para sua aplicação.</p>
+      </div>
+      <div class="plans">
+        <article class="plan">
+          <span class="plan-tag">30 DIAS</span><h3>Mensal</h3>
+          <div class="price">R$ 4,00</div><p>Hospedagem por 30 dias</p>
+          <button data-plan="mensal">Contratar plano <span>→</span></button>
+        </article>
+        <article class="plan featured">
+          <span class="popular">MAIS ESCOLHIDO</span><span class="plan-tag">90 DIAS</span>
+          <h3>Trimestral</h3><div class="price">R$ 10,00</div><p>Hospedagem por 90 dias</p>
+          <button data-plan="trimestral">Contratar plano <span>→</span></button>
+        </article>
+        <article class="plan">
+          <span class="plan-tag">365 DIAS</span><h3>Anual</h3>
+          <div class="price">R$ 30,00</div><p>Hospedagem por 365 dias</p>
+          <button data-plan="anual">Contratar plano <span>→</span></button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section pix-section" id="pix">
+      <div class="section-heading">
+        <span class="eyebrow">PAGAMENTO VIA PIX</span>
+        <h2>Chave PIX da hospedagem</h2>
+        <p>Use a chave abaixo para realizar o pagamento do plano escolhido. A hospedagem só será ativada após a confirmação do recebimento.</p>
+      </div>
+      <div class="pix-card">
+        <span class="plan-tag">CHAVE PIX ALEATÓRIA</span>
+        <code id="pix-key">7046dfa9-08c5-478b-9dd9-8ab07014062c</code>
+        <button type="button" id="copy-pix">Copiar chave PIX</button>
+        <p id="pix-copy-status" class="pix-status" role="status"></p>
+      </div>
+    </section>
+
+    <section class="section how">
+      <div class="section-heading"><span class="eyebrow">SIMPLES E ORGANIZADO</span><h2>Como funciona</h2></div>
+      <div class="steps">
+        <div><b>01</b><h3>Escolha seu plano</h3><p>Selecione mensal, trimestral ou anual.</p></div>
+        <div><b>02</b><h3>Informe seus dados</h3><p>Preencha os dados de contato e da aplicação solicitados com segurança.</p></div>
+        <div><b>03</b><h3>Confirmação</h3><p>O pagamento será confirmado pelo provedor integrado.</p></div>
+        <div><b>04</b><h3>Ativação</h3><p>A hospedagem é provisionada em uma instância separada.</p></div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div><span class="eyebrow">VERTEX APPLICATIONS 🪽</span><h2>Pronto para hospedar seu bot?</h2><p>Escolha um plano e comece sua contratação.</p></div>
+      <a class="primary-btn" href="#planos">Ver planos <span>→</span></a>
+    </section>
+  </main>
+
+  <footer><a class="footer-brand" href="#">VERTEX APPLICATIONS 🪽</a><span>© <span id="year"></span> VERTEX APPLICATIONS. Todos os direitos reservados.</span></footer>
+
+  <dialog id="checkout">
+    <form id="checkout-form">
+      <button type="button" class="close" id="close-dialog" aria-label="Fechar">×</button>
+      <span class="eyebrow">COMEÇAR CONTRATAÇÃO</span>
+      <h2 id="chosen-plan">Seu plano</h2>
+      <p id="chosen-price" class="dialog-price"></p>
+      <label>Seu nome<input name="customerName" maxlength="80" required placeholder="Como podemos te chamar?"></label>
+      <label>Contato (Discord ou e-mail)<input name="contact" maxlength="120" required placeholder="Ex.: usuario ou email@exemplo.com"></label>
+      <p class="security-note">Por segurança, não informe seu token de bot nesta etapa. A configuração técnica deve usar um canal protegido.</p>
+      <button class="submit-btn" type="submit">Continuar</button>
+      <p id="form-message" class="form-message" role="status"></p>
+    </form>
+  </dialog>
+  <script src="/app.js"></script>
+</body>
+</html>
